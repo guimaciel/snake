@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>SNAKE</h1>
+    <div class="board" id="board" tabindex="0"></div>
+    <div class="controllers">
+      <div class="score">
+        <h2>Score:</h2>
+        <h1 id="score">0</h1>
+      </div>
+      <div class="dificulty">
+        <label for="dificulty" l>Dificulty:</label>
+        <input
+          type="number"
+          id="dificulty"
+          value="5"
+          min="1"
+          max="10"
+          onchange="changeLevel(this)"
+        />
+      </div>
+      <div class="size">
+        <div class="size-item">
+          <label for="sizeX">Width:</label>
+          <input
+            type="number"
+            id="sizeX"
+            min="10"
+            max="30"
+            value="20"
+            onchange="changeLargura(this)"
+          />
+        </div>
+        <div class="size-item">
+          <label for="sizeY">Height:</label>
+          <input
+            type="number"
+            id="sizeY"
+            min="10"
+            max="30"
+            value="20"
+            onchange="changeAltura(this)"
+          />
+        </div>
+      </div>
+    </div>
+    <button class="btn" id="btnRestart" onclick="restart(event)">Start</button>
+    <script src="./script.js"></script>
+  </body>
+</html>
