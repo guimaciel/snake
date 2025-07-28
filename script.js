@@ -85,6 +85,10 @@ function redrawBoard() {
 }
 // const boardEl = document.getElementById("board");
 window.addEventListener("keydown", (e) => {
+  eventKeyPressed(e.key);
+});
+
+function eventKeyPressed(keyPressed) {
   let dir = 0;
   const keysAllowed = [
     "w",
@@ -96,8 +100,6 @@ window.addEventListener("keydown", (e) => {
     "ArrowDown",
     "ArrowRight",
   ];
-
-  let keyPressed = e.key;
 
   if (!keysAllowed.find((key) => key == keyPressed)) {
     return;
@@ -139,7 +141,7 @@ window.addEventListener("keydown", (e) => {
     gameLost = false;
     gameStart();
   }
-});
+}
 
 function moveSnake() {
   const head = snake[0];
@@ -304,4 +306,9 @@ function changeAltura(e) {
   r.style.setProperty("--height", BOARD_HEIGHT);
   gameRunning = false;
   redrawBoard();
+}
+
+function btnArrowPressed(btn) {
+  console.log(btn.id);
+  eventKeyPressed(btn.id);
 }

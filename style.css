@@ -169,7 +169,7 @@ input {
 }
 
 .btn {
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 0.5rem 1rem;
   border: none;
   background-color: #838383;
@@ -191,4 +191,55 @@ input {
   padding: 0;
   margin: 0;
   font-size: 1rem;
+}
+
+.controller-keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.3rem;
+}
+
+.controller-keys-2nd-line {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.3rem;
+}
+
+.btn-arrow {
+  width: 5rem;
+  height: 5rem;
+  background-color: #486790;
+  fill: #fff;
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-arrow > svg {
+  width: 2rem;
+}
+
+.controllers-columns {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.controllers-col-right {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  row-gap: 1rem;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .controllers-columns {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
 }
