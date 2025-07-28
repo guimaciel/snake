@@ -221,8 +221,8 @@ input {
 
 .controllers-columns {
   display: flex;
-  flex-direction: row;
-  column-gap: 1rem;
+  flex-direction: column;
+  row-gap: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -235,11 +235,4 @@ input {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-}
-
-@media only screen and (max-width: 650px) {
-  .controllers-columns {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
 }
